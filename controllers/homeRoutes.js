@@ -6,7 +6,7 @@ router.get('/', async (req, res) => {
   try {
     const allPosts = await Post.findAll();
 
-    res.render('main', {
+    res.render('layouts/main', {
       allPosts,
     });
   } catch (err) {
