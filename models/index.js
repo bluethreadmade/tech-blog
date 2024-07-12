@@ -20,5 +20,4 @@ Comment.belongsTo(Post);
 // Comment belongs to User
 Comment.belongsTo(User);
 
-
 module.exports = { User, Post, Comment };

@@ -21,7 +21,7 @@ Post.init(
     },
     date_created: {
         type: DataTypes.DATE,
-        allowNull: false,
+        allowNull: true,
     },
     userId: {
         type: DataTypes.INTEGER,
