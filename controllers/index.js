@@ -18,7 +18,8 @@ router.get('/', async (req, res) => {
         );
 
         res.render('home', {
-            posts
+            posts,
+            loggedIn: req.session.loggedIn
         });
 
         res.status(200);
