@@ -28,4 +28,16 @@ router.get('/', async (req, res) => {
     }
 });
 
+// render login page
+router.get('/login', async (req, res) => {
+    try {
+        res.render('login');
+
+        res.status(200);
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
+});
+
 module.exports = router;
