@@ -1,0 +1,21 @@
+{
+    "singleQuote": true,
+    "semi": true,
+    "tabWidth": 4,
+    "useTabs": false,
+    "trailingComma": "es5",
+    "bracketSpacing": true,
+    "arrowParens": "always",
+    "printWidth": 80,
+    "htmlWhitespaceSensitivity": "ignore",
+    "endOfLine": "lf",
+    "embeddedLanguageFormatting": "auto",
+    "overrides": [
+        {
+            "files": "*.hbs",
+            "options": {
+                "parser": "angular"
+            }
+        }
+    ]
+}

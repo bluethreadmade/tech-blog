@@ -28,7 +28,7 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 // set views and layouts directory
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', './views');
 // set layout file
 app.set('layout', 'layouts/main');
 
