@@ -8,20 +8,28 @@ const routes = require('./controllers');
 const sequelize = require('./config/connection');
 const helpers = require('./utils/helpers');
 
+// Create a new sequelize store using the express-session package
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
+
 const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Set up sessions
 const sess = {
   secret: 'Super secret secret',
+  cookie: {},
   resave: false,
   saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize
+  })
 };
 
+// Add express-session and store as Express.js middleware
 app.use(session(sess));
 
 // initialize expres--handlebars
-const hbs = exphbs.create({ defaultLayout: 'main' });
+const hbs = exphbs.create({ defaultLayout: 'main', helpers });
 // use the specified layout file
 app.engine('handlebars', hbs.engine);
 //app.engine('handlebars', hbs.engine);
