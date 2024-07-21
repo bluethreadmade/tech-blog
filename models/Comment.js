@@ -15,6 +15,10 @@ Comment.init(
         type: DataTypes.STRING,
         allowNull: false,
     },
+    date_created: {
+      type: DataTypes.DATE,
+      allowNull: true,
+    },  
     userId: {
         type: DataTypes.INTEGER,
         references: {

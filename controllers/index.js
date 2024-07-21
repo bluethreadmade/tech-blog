@@ -53,4 +53,24 @@ router.get('/signup', async (req, res) => {
     }
 });
 
+// view one post
+router.get('/onePost/:id', async(req, res) => {
+    try {
+        // find the post id
+        const postData = await Post.findByPk(req.params.id);
+        // get the posts data
+        const post = postData.get({ plain: true });
+
+        // render the hbs file onePost with the data from Post
+        res.render('onePost', {
+            post,
+        });
+
+        res.status(200);
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
+});
+
 module.exports = router;

@@ -5,7 +5,7 @@
                 <h1>The Tech Blog</h1>
             </div>
         </div>
-            {{#each posts}}
+        {{!-- serialize posts, view ones post and it's corresponding comment --}}
             <div class="card">
                 <a class="btn card-block stretched-link text-decoration-none" id="openPostBtn" href="#"></a>
                 <h5 class="card-header row mx-0">
@@ -16,10 +16,19 @@
                     <p class="card-text">{{ content }}</p>
                 </div>
             </div>
-            {{/each}}
+            {{!-- {{#each comments}}
+            <div class="card">
+                <h5 class="card-header row mx-0">
+                    <p class="col"></p>
+                </h5>
+                <div class="card-body">
+                    <p class="card-text">{{ content }}</p>
+                    <p class="card-text">{{ user_Id }}</p>
+                    <p class="card-text">{{ date_created }}</p>
+                </div>
+            </div>
+            {{/each}} --}}
+
         </div>
     </section>
 </section>
-
-</section>
-<script src="/js/posts.js"></script>
