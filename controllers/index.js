@@ -61,10 +61,15 @@ router.get('/onePost/:id', async(req, res) => {
         const postData = await Post.findByPk(req.params.id);
         // get the posts data
         const post = postData.get({ plain: true });
+        // get the comments
+        const commentData = await Comment.findAll({where: { postId: req.params.id }});
+        // get the comment data for all comments by iterating through the array that comment.finall puts out
+        const comments = commentData.map(comment => comment.get({ plain: true }));
 
         // render the hbs file onePost with the data from Post
         res.render('onePost', {
             post,
+            comments,
         });
 
         res.status(200);
