@@ -1,32 +1,27 @@
 [
-  {
-    "title": "Title1",
-    "content": "content1",
-    "userId": 1,
-    "id": 1
-  },
-  {
-    "title": "Title2",
-    "content": "content2",
-    "userId": 1,
-    "id": 2
-  },
-  {
-    "title": "Title3",
-    "content": "content3",
-    "userId": 1,
-    "id": 3
-  },
-  {
-    "title": "Title4",
-    "content": "content4",
-    "userId": 1,
-    "id": 4
-  },
-  {
-    "title": "Title5",
-    "content": "content5",
-    "userId": 1,
-    "id": 5
-  }
+    {
+        "title": "Title1",
+        "content": "content1",
+        "userId": 1
+    },
+    {
+        "title": "Title2",
+        "content": "content2",
+        "userId": 1
+    },
+    {
+        "title": "Title3",
+        "content": "content3",
+        "userId": 1
+    },
+    {
+        "title": "Title4",
+        "content": "content4",
+        "userId": 1
+    },
+    {
+        "title": "Title5",
+        "content": "content5",
+        "userId": 1
+    }
 ]
