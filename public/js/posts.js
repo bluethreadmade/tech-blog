@@ -1,11 +1,11 @@
-const openPostBtn = document.getElementById('openPostBtn');
+// const openPostBtn = document.getElementById('openPostBtn');
 
-function openPostHandler(event) {
-    event.preventDefault();
+// function openPostHandler(event) {
+//     event.preventDefault();
 
-    console.log("clickedPostButton")
+//     console.log("clickedPostButton")
 
-    document.location.replace('/onePost/:id');
-};
+//     document.location.replace('/onePost/:id');
+// };
 
-openPostBtn.addEventListener('click', openPostHandler);
+// openPostBtn.addEventListener('click', openPostHandler);

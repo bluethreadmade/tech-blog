@@ -55,6 +55,7 @@ router.get('/signup', async (req, res) => {
 
 // view one post
 router.get('/onePost/:id', async(req, res) => {
+    console.log(req.params.id);
     try {
         // find the post id
         const postData = await Post.findByPk(req.params.id);
