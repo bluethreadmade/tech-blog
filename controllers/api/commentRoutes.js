@@ -1,29 +1,24 @@
 const router = require('express').Router();
 const { Comment } = require('../../models');
 
-// create new comment /api/comments
-router.post('/comments'),
-    async (req, res) => {
-        // check if the user is signed in
-        if (req.session.userID) {
-            try {
-                // create the comment with the comment and the userID from session
-                const commentData = await Comment.create({
-                    ...req.body,
-                    userId: req.session.userId,
-                    content: req.body.content,
-                });
+// create new comment /api/comments/newComment
+router.post('/newComment', async (req, res) => {
+    console.log('here');
+    try {
+        // create the comment with the comment and the userID from session
+        // needs postId too
+        const commentData = await Comment.create({
+            ...req.body,
+            userId: req.session.userId,
+            content: req.body.newComment,
+        });
 
-                // send a 200 status and the data from the comment
-                res.status(200).json(commentData);
-            } catch (error) {
-                console.log(err);
-                res.status(500).json(err);
-            }
-        }
-        else{
-            return res.status(401);
-        }
-    };
+        // send a 200 status and the data from the comment
+        res.status(200).json(commentData);
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
+});
 
 module.exports = router;
