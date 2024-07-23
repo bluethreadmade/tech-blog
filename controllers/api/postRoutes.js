@@ -3,13 +3,13 @@ const { Post } = require('../../models');
 
 // Create post
 router.post('/newPost', async (req, res) => {
-    try{
+    try {
         // create the post with the content and userid from the session
         const postData = await Post.create({
             ...req.body,
             userId: req.session.userId,
             content: req.body.newPostContent,
-            title: req.body.newPostTitle
+            title: req.body.newPostTitle,
         });
 
         // send 200 status and the data from the post
@@ -22,3 +22,5 @@ router.post('/newPost', async (req, res) => {
 
 // Update post
 // Delete post
+
+module.exports = router;
