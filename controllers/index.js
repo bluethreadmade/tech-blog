@@ -3,7 +3,7 @@ const router = require('express').Router();
 const apiRoutes = require('./api');
 
 // import the models
-const { User, Post, Comment } = require("../models");
+const { User, Post, Comment } = require('../models');
 
 // handle api routes
 router.use('/api', apiRoutes);
@@ -13,13 +13,11 @@ router.get('/', async (req, res) => {
     try {
         const postsData = await Post.findAll();
 
-        const posts = postsData.map((post) => 
-            post.get({ plain: true })
-        );
+        const posts = postsData.map((post) => post.get({ plain: true }));
 
         res.render('home', {
             posts,
-            loggedIn: req.session.loggedIn
+            loggedIn: req.session.loggedIn,
         });
 
         res.status(200);
@@ -54,7 +52,7 @@ router.get('/signup', async (req, res) => {
 });
 
 // view one post
-router.get('/onePost/:id', async(req, res) => {
+router.get('/onePost/:id', async (req, res) => {
     console.log(req.params.id);
     try {
         // find the post id
@@ -62,14 +60,39 @@ router.get('/onePost/:id', async(req, res) => {
         // get the posts data
         const post = postData.get({ plain: true });
         // get the comments
-        const commentData = await Comment.findAll({where: { postId: req.params.id }});
+        const commentData = await Comment.findAll({
+            where: { postId: req.params.id },
+        });
         // get the comment data for all comments by iterating through the array that comment.finall puts out
-        const comments = commentData.map(comment => comment.get({ plain: true }));
+        const comments = commentData.map((comment) =>
+            comment.get({ plain: true })
+        );
 
         // render the hbs file onePost with the data from Post
         res.render('onePost', {
             post,
             comments,
+        });
+
+        res.status(200);
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
+});
+
+// GET all of the logged in users posts for the dashboard
+router.get('/dashboard', async (req, res) => {
+    try {
+        const postsData = await Post.findAll({
+            where: { userId: req.session.userId },
+        });
+
+        const posts = postsData.map((post) => post.get({ plain: true }));
+
+        res.render('dashboard', {
+            posts,
+            loggedIn: req.session.loggedIn,
         });
 
         res.status(200);
