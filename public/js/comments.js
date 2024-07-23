@@ -21,7 +21,7 @@ const newCommentHandler = async (event) => {
             headers: { 'Content-Type': 'application/json' },
         });
         if (response.ok) {
-            document.location.reload;
+            document.location.reload();
         }
     } catch (error) {
         alert('failed to post comment');
