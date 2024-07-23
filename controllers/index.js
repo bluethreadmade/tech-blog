@@ -102,4 +102,16 @@ router.get('/dashboard', async (req, res) => {
     }
 });
 
+// render newPost page
+router.get('/newPost', async (req, res) => {
+    try {
+        res.render('newPost');
+
+        res.status(200);
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
+});
+
 module.exports = router;
