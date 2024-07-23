@@ -16,8 +16,6 @@ router.post('/newComment', async (req, res) => {
 
         // send a 200 status and the data from the comment
         res.status(200).json(commentData);
-        // reload the page
-        //document.location.replace('/');
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
