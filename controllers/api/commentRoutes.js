@@ -11,6 +11,7 @@ router.post('/newComment', async (req, res) => {
             ...req.body,
             userId: req.session.userId,
             content: req.body.newComment,
+            postId: req.body.newCommentPostId
         });
 
         // send a 200 status and the data from the comment
