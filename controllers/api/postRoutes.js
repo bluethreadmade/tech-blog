@@ -23,11 +23,7 @@ router.post('/newPost', async (req, res) => {
 // Update post - /api/posts/:id
 router.put('/:id', async (req, res) => {
     try {
-        const postData = await Post.update(req.body, {
-            where: {
-                id: req.params.id,
-            },
-        });
+        const postData = await Post.findByPk(req.params.id);
 
         if (!postData) {
             res.status(404).json({
@@ -35,6 +31,8 @@ router.put('/:id', async (req, res) => {
             });
             return;
         }
+
+        await postData.update(req.body);
 
         res.status(200).json(postData);
     } catch (err) {

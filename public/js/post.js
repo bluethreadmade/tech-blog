@@ -58,17 +58,23 @@ const editPostHandler = async (event) => {
 
     // Convert form data from the form to JSON
     const formData = new FormData(formElement);
+    // Log the form data entries
+    for (let entry of formData.entries()) {
+        console.log(entry[0] + ': ' + entry[1]);
+    }
 
     try {
         const request = await fetch('/api/posts/' + postId, {
             method: 'PUT',
             headers: {
-                'Content-Type': 'post/json',
+                'Content-Type': 'application/json',
             },
             body: JSON.stringify(formData),
         });
 
         if (request.ok) {
+            console.log(formData);
+
             window.location.replace('/dashboard');
         }
     } catch (error) {
@@ -83,5 +89,7 @@ if (deletePostBtn) {
     deletePostBtn.addEventListener('click', deletePostHandler);
 }
 if (editPostBtn) {
-    editPostBtn.addEventListener('click', editPostHandler);
+    const editForm = document.getElementById('editForm');
+    editForm.addEventListener('submit', editPostHandler);
+    //editPostBtn.addEventListener('click', editPostHandler);
 }
