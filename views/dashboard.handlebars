@@ -10,7 +10,8 @@
                 <a class="btn card-block stretched-link text-decoration-none" id="openPostBtn" href="/newPost/edit/{{ id }}"></a>
                 <h5 class="card-header row mx-0">
                     <p class="col">{{ title }}</p>
-                    <p class="col">{{ date_created }}</p>
+                    <p class="col">{{ user.username }}</p>
+                    <p class="col">{{ dateFormat date_created }}</p>
                 </h5>
                 <div class="card-body">
                     <p class="card-text">{{ content }}</p>

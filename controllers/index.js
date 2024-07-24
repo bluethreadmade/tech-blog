@@ -11,8 +11,13 @@ router.use('/api', apiRoutes);
 // GET all posts for homepage
 router.get('/', async (req, res) => {
     try {
-        const postsData = await Post.findAll();
-
+        const postsData = await Post.findAll({
+            include:[{ 
+                model: User,
+                attributes: ['username']
+            }]
+        });
+        console.log(postsData);
         const posts = postsData.map((post) => post.get({ plain: true }));
 
         res.render('home', {
@@ -53,15 +58,23 @@ router.get('/signup', async (req, res) => {
 
 // view one post
 router.get('/onePost/:id', async (req, res) => {
-    console.log(req.params.id);
     try {
         // find the post id
-        const postData = await Post.findByPk(req.params.id);
+        const postData = await Post.findByPk(req.params.id, {
+            include:[{ 
+                model: User,
+                attributes: ['username']
+            }]
+        });
         // get the posts data
         const post = postData.get({ plain: true });
         // get the comments
         const commentData = await Comment.findAll({
             where: { postId: req.params.id },
+            include:[{ 
+                model: User,
+                attributes: ['username']
+            }]
         });
         // get the comment data for all comments by iterating through the array that comment.finall puts out
         const comments = commentData.map((comment) =>
@@ -73,6 +86,7 @@ router.get('/onePost/:id', async (req, res) => {
             post,
             comments,
         });
+        console.log(post);
 
         res.status(200);
     } catch (err) {
@@ -86,6 +100,10 @@ router.get('/dashboard', async (req, res) => {
     try {
         const postsData = await Post.findAll({
             where: { userId: req.session.userId },
+            include:[{ 
+                model: User,
+                attributes: ['username']
+            }]
         });
 
         const posts = postsData.map((post) => post.get({ plain: true }));

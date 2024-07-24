@@ -10,6 +10,7 @@
                 <h5 class="card-header row mx-0">
                     <p class="col">{{ post.title }}</p>
                     <p class="col">{{ dateFormat post.date_created }}</p>
+                    <p class="col">{{ user.username }}</p>
                 </h5>
                 <div class="card-body">
                     <p class="card-text">{{ post.content }}</p>
@@ -22,15 +23,15 @@
                 </h5>
                 <div class="card-body">
                     <p class="card-text">{{ content }}</p>
-                    <p class="card-text">{{ user_Id }}</p>
-                    <p class="card-text">{{ date_created }}</p>
+                    <p class="card-text">{{ user.username }}</p>
+                    <p class="card-text">{{ dateFormat date_created }}</p>
                 </div>
             </div>
             {{/each}}
             <form class="form mb-3">
                 <label for="commentInput" class="form-label">Comment</label>
                 <input type="text" class="form-control" id="commentInput" rows="3"></input>
-                <button type="button" class="btn btn-primary" id="commentButton">Submit Comment </button>
+                <button type="button" class="btn btn-primary" id="commentButton">Submit Comment</button>
             </form>
         </div>
     </section>
