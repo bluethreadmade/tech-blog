@@ -1,4 +1,4 @@
-const newPostBtn = document.querySelector('postButton');
+const newPostBtn = document.querySelector('#submitPostButton');
 
 const newPostHandler = async (event) => {
     event.preventDefault();
@@ -17,11 +17,11 @@ const newPostHandler = async (event) => {
             headers: { 'Content-Type': 'application/json' },
         });
         if (response.ok) {
-            document.location.reload();
+            window.location.href = '/dashboard';
         }
     } catch (error) {
         alert('failed to post');
     } 
 };
 
-newPostButton.addEventListener('click', newPostHandler);
+submitPostButton.addEventListener('click', newPostHandler);
