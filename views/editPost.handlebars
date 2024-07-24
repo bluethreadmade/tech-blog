@@ -4,10 +4,10 @@
             <div class="col">
                 <h1>The Tech Blog</h1>
             </div>
-            <form class="form mb-3">
-                <input type="text" class="form-control" id="postTitle" rows="1" placeholder="Title"></input>
-                <input type="text" class="form-control" id="postContent" rows="3" placeholder="Post"></input>
-                <button type="button" class="btn btn-primary" id="submitPostButton">Submit Post</button>
+            <form class="form mb-3" id="editForm">
+                <input type="text" class="form-control" id="postTitle" rows="1" placeholder="Title" value="{{ post.title }}" required></input>
+                <input type="text" class="form-control" id="postContent" rows="3" placeholder="Post" value="{{ post.content }}" required></input>
+                <button type="button" class="btn btn-primary" id="editPostButton">Edit Post</button>
                 <button type="button" class="btn btn-primary" id="deletePostButton">Delete Post</button>
             </form>
     </section>

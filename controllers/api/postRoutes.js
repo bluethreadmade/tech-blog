@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Post } = require('../../models');
 
-// Create post /api/newPost
+// Create post /api/posts/newPost
 router.post('/newPost', async (req, res) => {
     try {
         // create the post with the content and userid from the session
@@ -43,7 +43,7 @@ router.put('/:id', async (req, res) => {
     }
 });
 
-// Delete post - /api/post/:id
+// Delete post - /api/posts/:id
 router.delete('/:id', async (req, res) => {
     try {
         const postData = await Post.destroy({

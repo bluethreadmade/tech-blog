@@ -120,7 +120,7 @@ router.get('/newPost/edit/:id', async (req, res) => {
         const postData = await Post.findByPk(req.params.id);
         const post = postData.get({ plain: true });
 
-        res.render('newPost', {
+        res.render('editPost', {
             loggedIn: req.session.loggedIn,
             post,
         });
