@@ -114,4 +114,19 @@ router.get('/newPost', async (req, res) => {
     }
 });
 
+// edit one post
+router.get('/newPost/edit/:id', async (req, res) => {
+    try {
+        const postData = await Post.findByPk(req.params.id);
+        const post = postData.get({ plain: true });
+
+        res.render('newPost', {
+            loggedIn: req.session.loggedIn,
+            post,
+        });
+    } catch (err) {
+        res.status(500).json('Something went wrong!');
+    }
+});
+
 module.exports = router;

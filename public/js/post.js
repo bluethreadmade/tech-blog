@@ -1,4 +1,5 @@
 const newPostBtn = document.querySelector('#submitPostButton');
+const deletePostBtn = document.querySelector('#deletePostButton');
 
 const newPostHandler = async (event) => {
     event.preventDefault();
@@ -24,4 +25,23 @@ const newPostHandler = async (event) => {
     } 
 };
 
+const deletePostHandler = async (event) => {
+    event.preventDefault();
+
+    // get postid from url
+    const postId = window.location.pathname.split('/')[3];
+
+    try {
+        const response = await fetch('/api/posts/' + postId, {
+            method: 'DELETE',
+        });
+
+        if (response.ok) {
+            window.location.replace('/dashboard');
+        }
+    } catch (error) {
+        console.log('error', error);
+    }}
+
 submitPostButton.addEventListener('click', newPostHandler);
+deletePostButton.addEventListener('click', deletePostHandler);
