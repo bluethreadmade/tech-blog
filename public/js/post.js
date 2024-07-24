@@ -53,15 +53,10 @@ const editPostHandler = async (event) => {
     // get postid from url
     const postId = window.location.pathname.split('/')[3];
 
-    // get the data from the form
-    const formElement = document.getElementById('editForm');
-
-    // Convert form data from the form to JSON
-    const formData = new FormData(formElement);
-    // Log the form data entries
-    for (let entry of formData.entries()) {
-        console.log(entry[0] + ': ' + entry[1]);
-    }
+    // get post content from text input area
+    const content = document.getElementById('postContent').value.trim();
+    // get post title from text input area
+    const title = document.getElementById('postTitle').value.trim();
 
     try {
         const request = await fetch('/api/posts/' + postId, {
@@ -69,12 +64,10 @@ const editPostHandler = async (event) => {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(formData),
+            body: JSON.stringify({ content, title }),
         });
 
         if (request.ok) {
-            console.log(formData);
-
             window.location.replace('/dashboard');
         }
     } catch (error) {
