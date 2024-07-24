@@ -9,7 +9,7 @@
                 <a class="btn card-block stretched-link text-decoration-none" id="openPostBtn"></a>
                 <h5 class="card-header row mx-0">
                     <p class="col">{{ post.title }}</p>
-                    <p class="col">{{ post.date_created }}</p>
+                    <p class="col">{{ dateFormat post.date_created }}</p>
                 </h5>
                 <div class="card-body">
                     <p class="card-text">{{ post.content }}</p>

@@ -6,7 +6,7 @@ const exphbs = require('express-handlebars');
 
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
-const helpers = require('./utils/helpers');
+const helpers = require('./helpers/helpers');
 
 // Create a new sequelize store using the express-session package
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
