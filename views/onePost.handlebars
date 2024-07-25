@@ -28,11 +28,13 @@
                 </div>
             </div>
             {{/each}}
+            {{#if loggedIn }}
             <form class="form mb-3">
-                <label for="commentInput" class="form-label">Comment</label>
+                <label for="commentInput" class="form-label">Add Comment</label>
                 <input type="text" class="form-control" id="commentInput" rows="3"></input>
                 <button type="button" class="btn btn-primary" id="commentButton">Submit Comment</button>
             </form>
+            {{/if}}
         </div>
     </section>
 </section>

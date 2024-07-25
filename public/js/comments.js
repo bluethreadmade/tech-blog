@@ -28,4 +28,6 @@ const newCommentHandler = async (event) => {
     } 
 };
 
-commentButton.addEventListener('click', newCommentHandler);
+if(newCommentBtn) {
+    newCommentBtn.addEventListener('click', newCommentHandler)
+};

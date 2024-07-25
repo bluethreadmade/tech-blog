@@ -19,18 +19,15 @@
             integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
             crossorigin="anonymous"
         />
-        {{!-- <link rel="stylesheet" href="/css/styles.css" /> --}}
+        <link rel="stylesheet" href="/css/styles.css" />
 
-        <!-- Include Quill stylesheet -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/quill@2/dist/quill.snow.css"
-            rel="stylesheet"
-        />
     </head>
     <body>
         {{> navbar}}
 
         <main>{{{body}}}</main>
+
+        {{> footer}}
 
         <!-- Bootstrap core JavaScript -->
         <script
@@ -38,6 +35,5 @@
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"
         ></script>
-        {{!-- <script src="/js/navbar.js" defer></script> --}}
     </body>
 </html>
