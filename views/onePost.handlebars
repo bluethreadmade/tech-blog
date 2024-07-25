@@ -5,26 +5,24 @@
                 <h1>The Tech Blog</h1>
             </div>
         </div>
-            <div class="card">
-                <a class="btn card-block stretched-link text-decoration-none" id="openPostBtn"></a>
-                <h5 class="card-header row mx-0">
-                    <p class="col">{{ post.title }}</p>
-                    <p class="col">{{ dateFormat post.date_created }}</p>
-                    <p class="col">{{ post.user.username }}</p>
-                </h5>
+            <div class="card my-2">
+                <a class="btn card-block stretched-link text-decoration-none p-0 border border-0" id="openPostBtn"></a>
+                <div class="card-header row d-flex align-items-center mx-0">
+                    <h5 class="col mb-0 text-start">{{ post.title }}</h5>
+                    <p class="col mb-0 text-end">Posted By: {{ post.user.username }} on: {{ dateFormat post.date_created }}</p>
+                </div>
                 <div class="card-body">
-                    <p class="card-text">{{ post.content }}</p>
+                    <p class="card-text text-start">{{ post.content }}</p>
                 </div>
             </div>
             {{#each comments}}
-            <div class="card">
+            <div class="card my-2">
                 <h5 class="card-header row mx-0">
                     <p class="col"></p>
                 </h5>
                 <div class="card-body">
-                    <p class="card-text">{{ content }}</p>
-                    <p class="card-text">{{ user.username }}</p>
-                    <p class="card-text">{{ dateFormat date_created }}</p>
+                    <p class="card-text text-start">{{ content }}</p>
+                    <p class="card-text text-end">-{{ user.username }}, {{ dateFormat date_created }}</p>
                 </div>
             </div>
             {{/each}}
