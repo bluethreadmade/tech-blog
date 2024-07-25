@@ -17,7 +17,6 @@ router.get('/', async (req, res) => {
                 attributes: ['username']
             }]
         });
-        console.log(postsData);
         const posts = postsData.map((post) => post.get({ plain: true }));
 
         res.render('home', {
@@ -86,7 +85,6 @@ router.get('/onePost/:id', async (req, res) => {
             post,
             comments,
         });
-        console.log(post);
 
         res.status(200);
     } catch (err) {

@@ -5,8 +5,6 @@ const editPostBtn = document.querySelector('#editPostButton');
 const newPostHandler = async (event) => {
     event.preventDefault();
 
-    console.log('clicked post submit button');
-
     // get post content from text input area
     const newPostContent = document.getElementById('postContent').value.trim();
     // get post title from text input area
@@ -28,7 +26,6 @@ const newPostHandler = async (event) => {
 
 const deletePostHandler = async (event) => {
     event.preventDefault();
-    console.log('clicked delete button');
 
     // get postid from url
     const postId = window.location.pathname.split('/')[3];
@@ -48,7 +45,6 @@ const deletePostHandler = async (event) => {
 
 const editPostHandler = async (event) => {
     event.preventDefault();
-    console.log('clicked edit button');
 
     // get postid from url
     const postId = window.location.pathname.split('/')[3];
@@ -84,5 +80,4 @@ if (deletePostBtn) {
 if (editPostBtn) {
     const editForm = document.getElementById('editForm');
     editForm.addEventListener('submit', editPostHandler);
-    //editPostBtn.addEventListener('click', editPostHandler);
 }

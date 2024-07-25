@@ -3,7 +3,6 @@ const { Comment, User } = require('../../models');
 
 // create new comment /api/comments/newComment
 router.post('/newComment', async (req, res) => {
-    console.log('here');
     try {
         // create the comment with the comment and the userID from session
         // needs postId too
