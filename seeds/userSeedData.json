@@ -1,23 +1,32 @@
 [
-    {
-      "username": "User1",
-      "password": "password1"
-    },
-    {
-      "username": "User2",
-      "password": "password2"
-    },
-    {
-      "username": "User3",
-      "password": "password3"
-    },
-    {
-      "username": "User4",
-      "password": "password4"
-    },
-    {
-      "username": "User5",
-      "password": "password5"
-    }
-  ]
+  {
+      "username": "jane_doe",
+      "password": "J4n3D03!#"
+  },
+  {
+      "username": "john_smith",
+      "password": "J0hnSm1th@2024"
+  },
+  {
+      "username": "alice_wonder",
+      "password": "Al1c3_W0nd3r$"
+  },
+  {
+      "username": "bob_builder",
+      "password": "B0bBui1d3r!$"
+  },
+  {
+      "username": "charlie_brown",
+      "password": "Ch@rl1eBr0wn!"
+  },
+  {
+      "username": "david_jones",
+      "password": "D@v1dJ0n3s$"
+  },
+  {
+      "username": "eve_adams",
+      "password": "Ev3@d@m$2024"
+  }
+]
+
   

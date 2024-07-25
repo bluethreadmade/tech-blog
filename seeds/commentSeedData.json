@@ -1,32 +1,212 @@
 [
-    {
-      "content": "comment content 1",
-      "userId": 1,
-      "postId": 1
-    },
-    {
-      "content": "comment content 2",
-      "userId": 1,
-      "postId": 1
-    },
-    {
-      "content": "comment content 3",
-      "userId": 1,
-      "postId": 1
-    },
-    {
-      "content": "comment content 4",
-      "userId": 1,
-      "postId": 1
-    },
-    {
-      "content": "comment content 5",
-      "userId": 1,
-      "postId": 1
-    },
-    {
-      "content": "comment content 6",
+  {
+      "content": "I completely agree with you about the beauty of nature. It's so refreshing to take a break and enjoy the outdoors.",
       "userId": 2,
       "postId": 1
-    }
-  ]
+  },
+  {
+      "content": "Nature walks are my favorite way to unwind after a long week. Thanks for sharing!",
+      "userId": 3,
+      "postId": 1
+  },
+  {
+      "content": "Cooking at home has definitely improved my diet. It's also a great way to bond with family.",
+      "userId": 3,
+      "postId": 2
+  },
+  {
+      "content": "Experimenting with new recipes is so much fun. I love trying out different cuisines!",
+      "userId": 4,
+      "postId": 2
+  },
+  {
+      "content": "Regular exercise has changed my life. I feel so much more energetic and positive.",
+      "userId": 4,
+      "postId": 3
+  },
+  {
+      "content": "Exercise is indeed important for overall health. Thanks for highlighting this!",
+      "userId": 5,
+      "postId": 3
+  },
+  {
+      "content": "Japan and Italy are on my travel bucket list. Thanks for the travel tips!",
+      "userId": 1,
+      "postId": 4
+  },
+  {
+      "content": "Planning ahead really makes a difference. Great destinations to consider!",
+      "userId": 3,
+      "postId": 4
+  },
+  {
+      "content": "Effective time management has helped me achieve so much more. Great advice!",
+      "userId": 1,
+      "postId": 5
+  },
+  {
+      "content": "Using a calendar has been a game-changer for me. Thanks for the tips!",
+      "userId": 4,
+      "postId": 5
+  },
+  {
+      "content": "Mindfulness has really helped me manage stress better. Highly recommend it.",
+      "userId": 1,
+      "postId": 6
+  },
+  {
+      "content": "Meditation is such a powerful tool for mindfulness. Thanks for sharing!",
+      "userId": 5,
+      "postId": 6
+  },
+  {
+      "content": "Communication is key in any relationship. Great post!",
+      "userId": 1,
+      "postId": 7
+  },
+  {
+      "content": "Healthy relationships make life so much richer. Thanks for the tips!",
+      "userId": 6,
+      "postId": 7
+  },
+  {
+      "content": "Reading has been my favorite hobby since childhood. It’s such a great way to learn.",
+      "userId": 1,
+      "postId": 8
+  },
+  {
+      "content": "I love getting lost in a good book. Thanks for promoting reading!",
+      "userId": 4,
+      "postId": 8
+  },
+  {
+      "content": "Gardening is so therapeutic. It’s wonderful to grow your own food.",
+      "userId": 1,
+      "postId": 9
+  },
+  {
+      "content": "I started a small herb garden recently and it’s been so rewarding.",
+      "userId": 5,
+      "postId": 9
+  },
+  {
+      "content": "Taking breaks from screens is crucial. Thanks for the reminder!",
+      "userId": 1,
+      "postId": 10
+  },
+  {
+      "content": "A digital detox helps me recharge. Great advice!",
+      "userId": 6,
+      "postId": 10
+  },
+  {
+      "content": "Creative writing is a wonderful outlet for expression. Thanks for the tips!",
+      "userId": 1,
+      "postId": 11
+  },
+  {
+      "content": "Writing regularly has really improved my skills. Great post!",
+      "userId": 7,
+      "postId": 11
+  },
+  {
+      "content": "Healthy eating has made a big difference in my energy levels. Thanks for sharing!",
+      "userId": 1,
+      "postId": 12
+  },
+  {
+      "content": "Including more fruits and vegetables in my diet has been great for my health.",
+      "userId": 5,
+      "postId": 12
+  },
+  {
+      "content": "Positive thinking can truly transform your life. Thanks for this post!",
+      "userId": 2,
+      "postId": 13
+  },
+  {
+      "content": "Focusing on the positive has helped me through tough times. Great advice!",
+      "userId": 6,
+      "postId": 13
+  },
+  {
+      "content": "Home workouts are so convenient. Thanks for the routines!",
+      "userId": 2,
+      "postId": 14
+  },
+  {
+      "content": "Bodyweight exercises have been really effective for me. Great post!",
+      "userId": 7,
+      "postId": 14
+  },
+  {
+      "content": "DIY projects are a great way to personalize your home. Thanks for the ideas!",
+      "userId": 2,
+      "postId": 15
+  },
+  {
+      "content": "Small home improvements can make a big difference. Great tips!",
+      "userId": 4,
+      "postId": 15
+  },
+  {
+      "content": "Photography is such a rewarding hobby. Thanks for the beginner tips!",
+      "userId": 2,
+      "postId": 16
+  },
+  {
+      "content": "Experimenting with different angles has improved my photos. Great advice!",
+      "userId": 7,
+      "postId": 16
+  },
+  {
+      "content": "Sustainable living is so important for our planet. Thanks for sharing!",
+      "userId": 2,
+      "postId": 17
+  },
+  {
+      "content": "Making small eco-friendly changes can have a big impact. Great post!",
+      "userId": 5,
+      "postId": 17
+  },
+  {
+      "content": "Financial planning has given me peace of mind. Thanks for the tips!",
+      "userId": 2,
+      "postId": 18
+  },
+  {
+      "content": "Budgeting and saving are key to financial stability. Great advice!",
+      "userId": 6,
+      "postId": 18
+  },
+  {
+      "content": "Mental health should always be a priority. Thanks for this important post!",
+      "userId": 2,
+      "postId": 19
+  },
+  {
+      "content": "Seeking help when needed is crucial. Great reminder!",
+      "userId": 5,
+      "postId": 19
+  },
+  {
+      "content": "Volunteering has been such a fulfilling experience for me. Thanks for encouraging it!",
+      "userId": 2,
+      "postId": 20
+  },
+  {
+      "content": "Giving back to the community is so rewarding. Great post!",
+      "userId": 6,
+      "postId": 20
+  },
+  {
+      "content": "The tech industry is fascinating. Thanks for highlighting these trends!",
+      "userId": 2,
+      "postId": 21
+  },
+  {
+      "content": "Staying updated on tech trends is so important. Great information!",
+      "userId": 5,
+      "postId": 21
+  }
+]
