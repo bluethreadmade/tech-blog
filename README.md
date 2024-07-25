@@ -1,3 +1,3 @@
 # Tech Blog
 # Screenshots
-![image](https://github.com/user-attachments/assets/36161a26-e7db-424c-a5c7-b9ea67edb6ce)
+![image](https://github.com/user-attachments/assets/36c5d3c5-a786-489d-84df-b44656400bd0)
