@@ -84,6 +84,7 @@ router.get('/onePost/:id', async (req, res) => {
         res.render('onePost', {
             post,
             comments,
+            loggedIn: req.session.loggedIn,
         });
 
         res.status(200);

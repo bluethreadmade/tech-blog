@@ -1,4 +1,4 @@
-const newCommentBtn = document.querySelector('commentButton');
+const newCommentBtn = document.querySelector('#commentButton');
 
 const newCommentHandler = async (event) => {
     event.preventDefault();
@@ -16,7 +16,7 @@ const newCommentHandler = async (event) => {
             headers: { 'Content-Type': 'application/json' },
         });
         if (response.ok) {
-            document.location.reload();
+            window.location.reload();
         }
     } catch (error) {
         alert('failed to post comment');
