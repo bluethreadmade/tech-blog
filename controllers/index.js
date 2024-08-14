@@ -34,7 +34,10 @@ router.get('/', async (req, res) => {
 // render login page
 router.get('/login', async (req, res) => {
     try {
-        res.render('login');
+        let loginBool = true;
+        res.render('login', {
+            loginKey: loginBool
+        });
 
         res.status(200);
     } catch (err) {
@@ -46,7 +49,10 @@ router.get('/login', async (req, res) => {
 // render signUp page
 router.get('/signup', async (req, res) => {
     try {
-        res.render('signup');
+        let loginBool = false;
+        res.render('signup', {
+            loginKey: loginBool
+        });
 
         res.status(200);
     } catch (err) {
