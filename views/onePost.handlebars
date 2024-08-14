@@ -2,7 +2,7 @@
     <section class="container text-center">
         <div class="row">
             <div class="col">
-                <h1>The Tech Blog</h1>
+                <h1 class="my-4">The Tech Blog</h1>
             </div>
         </div>
             <div class="card my-2">
@@ -15,7 +15,7 @@
                     <p class="card-text text-start">{{ post.content }}</p>
                 </div>
             </div>
-            <h2>Comments</h2>
+            <h2 class="my-4">Comments</h2>
             {{#each comments}}
             <div class="card my-2">
                 <h5 class="card-header row mx-0">
@@ -28,9 +28,9 @@
             </div>
             {{/each}}
             {{#if loggedIn }}
-            <form class="form mb-3">
+            <form class="form mb-3 mt-3">
                 <label for="commentInput" class="form-label">Add Comment</label>
-                <input type="text" class="form-control" id="commentInput" rows="3"></input>
+                <input type="text" class="form-control mb-3" id="commentInput" rows="3"></input>
                 <button type="button" class="btn btn-primary" id="commentButton">Submit Comment</button>
             </form>
             {{/if}}
